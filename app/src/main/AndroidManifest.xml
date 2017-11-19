@@ -16,6 +16,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".MainMenuActivity" />
+        <activity android:name=".EnterTestActivity" />
+        <activity android:name=".ViewTestsActivity" />
+        <activity android:name=".ViewPatientActivity"></activity>
     </application>
 
 </manifest>

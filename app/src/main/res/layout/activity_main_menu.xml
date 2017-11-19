@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@color/red"
+    android:orientation="vertical"
+    tools:context="com.gbc.a2101015020.MainMenuActivity">
+
+    <ImageButton
+        android:id="@+id/enter_test"
+        style="@android:style/Widget.Material.ImageButton"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="39dp"
+        android:background="@color/red"
+        android:src="@drawable/ic_entertest" />
+
+    <ImageButton
+        android:id="@+id/display_tests"
+        style="@android:style/Widget.Material.ImageButton"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/enter_test"
+        android:background="@color/red"
+        android:src="@drawable/ic_displaytest" />
+
+    <ImageButton
+        android:id="@+id/display_patient"
+        style="@android:style/Widget.Material.ImageButton"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/logout"
+        android:background="@color/red"
+        android:src="@drawable/ic_displaypatient" />
+
+    <ImageButton
+        android:id="@+id/logout"
+        style="@android:style/Widget.Material.ImageButton"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="71dp"
+        android:background="@color/red"
+        android:onClick="onLogoutClick()"
+        android:src="@drawable/ic_logout" />
+
+</RelativeLayout>
