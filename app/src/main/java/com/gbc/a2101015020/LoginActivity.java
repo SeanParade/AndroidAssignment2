@@ -24,7 +24,7 @@ public class LoginActivity extends Activity {
 
     protected void onLoginClick(View view){
         Log.d(TAG, "onLoginClick: Pressed");
-        startActivity(new Intent(LoginActivity.this, MainMenuActivity.class));
+        startActivity(new Intent(view.getContext(), MainMenuActivity.class));
     }
 
     @Override

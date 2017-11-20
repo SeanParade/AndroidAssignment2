@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/red"
+    android:padding="20sp"
     tools:context="com.gbc.a2101015020.LoginActivity">
 
     <ImageView
@@ -13,9 +14,13 @@
         android:layout_height="261dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:src="@drawable/ic_halth"
-        tools:layout_editor_absoluteX="52dp"
-        tools:layout_editor_absoluteY="62dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/halthTitle"
@@ -23,39 +28,68 @@
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/halthImageView"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="207dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="208dp"
         android:fontFamily="monospace"
         android:text="HALTH"
         android:textColor="@color/white"
         android:textSize="70sp"
         android:textStyle="bold"
-        android:typeface="normal" />
+        android:typeface="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/halthImageView" />
 
     <EditText
         android:id="@+id/usernameEditText"
-        android:layout_width="wrap_content"
+        android:layout_width="275dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/halthTitle"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="26dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@color/red"
+        android:backgroundTint="@color/Lowlight"
+        android:capitalize="none"
+        android:cursorVisible="true"
         android:ems="10"
         android:inputType="textWebEditText"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
         android:text="Username"
+        android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="24sp" />
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/passwordEditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/passwordEditText"
-        android:layout_width="wrap_content"
+        android:layout_width="275dp"
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/usernameEditText"
         android:layout_below="@+id/usernameEditText"
-        android:layout_marginTop="10dp"
+        android:layout_marginBottom="40dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@color/red"
+        android:backgroundTint="@color/Lowlight"
         android:ems="10"
         android:inputType="textPassword"
+        android:keepScreenOn="true"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
         android:text="Password"
+        android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="24sp" />
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/loginButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/loginButton"
@@ -63,10 +97,12 @@
         android:layout_height="60sp"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/passwordEditText"
-        android:layout_marginTop="19dp"
-        android:background="@color/blue"
+        android:layout_marginBottom="8dp"
+        android:background="@color/white"
         android:onClick="onLoginClick"
         android:text="LOGIN"
-        android:textColor="@color/white"
-        android:textSize="24sp" />
-</RelativeLayout>
+        android:textColor="@color/red"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="20dp" />
+</android.support.constraint.ConstraintLayout>

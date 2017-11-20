@@ -1,9 +1,9 @@
 package com.gbc.a2101015020;
 
-import android.support.v7.app.AppCompatActivity;
+import android.app.Activity;
 import android.os.Bundle;
 
-public class ViewPatientActivity extends AppCompatActivity {
+public class ViewPatientActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

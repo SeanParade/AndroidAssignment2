@@ -1,117 +1,136 @@
 <?xml version="1.0" encoding="utf-8"?>
-<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/menu_grid"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/red"
-    android:columnCount="2"
-    android:orientation="vertical"
-    android:paddingTop="60sp"
-    android:rowCount="4"
-    tools:context="com.gbc.a2101015020.MainMenuActivity">
+    android:background="@color/red">
 
-    <TextView
-        android:id="@+id/view_test_text"
-        android:layout_width="wrap_content"
+    <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/menu_grid"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_column="0"
-        android:layout_gravity="bottom|center"
-        android:layout_row="0"
-        android:text="View Tests"
-        android:textColor="@color/white"
-        android:textSize="20sp" />
-
-    <TextView
-        android:id="@+id/enter_test_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_column="1"
-        android:layout_gravity="bottom|center"
-        android:layout_row="0"
-        android:text="Enter Test"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="20sp" />
-
-    <TextView
-        android:id="@+id/view_patient_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_column="0"
-        android:layout_gravity="bottom|center"
-        android:layout_row="2"
-        android:text="View Patient"
-        android:textColor="@color/white"
-        android:textSize="20sp" />
-
-    <TextView
-        android:id="@+id/logout_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_column="1"
-        android:layout_gravity="bottom|center"
-        android:layout_row="2"
-        android:text="Logout"
-        android:textAppearance="@style/TextAppearance.AppCompat"
-        android:textColor="@color/white"
-        android:textSize="20sp" />
-
-    <ImageButton
-        android:id="@+id/enter_test"
-        style="@android:style/Widget.Material.ImageButton"
-        android:layout_width="180dp"
-        android:layout_height="180dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_column="1"
-        android:layout_gravity="top|right"
-        android:layout_row="1"
+        android:layout_margin="30sp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:background="@color/red"
-        android:onClick="onEnterTestClick"
-        android:src="@drawable/ic_entertest" />
+        android:columnCount="2"
+        android:orientation="vertical"
+        android:rowCount="4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context="com.gbc.a2101015020.MainMenuActivity">
 
-    <ImageButton
-        android:id="@+id/display_tests"
-        style="@android:style/Widget.Material.ImageButton"
-        android:layout_width="180dp"
-        android:layout_height="180dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignTop="@+id/enter_test"
-        android:layout_column="0"
-        android:layout_gravity="top|left"
-        android:layout_row="1"
-        android:background="@color/red"
-        android:onClick="onVTestsClick"
-        android:src="@drawable/ic_displaytest" />
+        <TextView
+            android:id="@+id/view_test_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_gravity="bottom|center"
+            android:layout_marginTop="20sp"
+            android:layout_row="0"
+            android:text="View Tests"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
 
-    <ImageButton
-        android:id="@+id/display_patient"
-        style="@android:style/Widget.Material.ImageButton"
-        android:layout_width="180dp"
-        android:layout_height="180dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignTop="@+id/logout"
-        android:layout_column="0"
-        android:layout_gravity="top|left"
-        android:layout_row="3"
-        android:background="@color/red"
-        android:onClick="onVPatientClick"
-        android:src="@drawable/ic_displaypatient" />
+        <TextView
+            android:id="@+id/enter_test_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_gravity="bottom|center"
+            android:layout_marginTop="20sp"
+            android:layout_row="0"
+            android:text="Enter Test"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
 
-    <ImageButton
-        android:id="@+id/logout"
-        style="@android:style/Widget.Material.ImageButton"
-        android:layout_width="180dp"
-        android:layout_height="180dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_column="1"
-        android:layout_gravity="top|left"
-        android:layout_marginBottom="71dp"
-        android:layout_row="3"
-        android:background="@color/red"
-        android:onClick="onLogoutClick"
-        android:src="@drawable/ic_logout" />
-</GridLayout>
+        <TextView
+            android:id="@+id/view_patient_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_gravity="bottom|center"
+            android:layout_marginTop="20sp"
+            android:layout_row="2"
+            android:text="View Patient"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/logout_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_gravity="bottom|center"
+            android:layout_marginTop="20sp"
+            android:layout_row="2"
+            android:text="Logout"
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <ImageButton
+            android:id="@+id/enter_test"
+            style="@android:style/Widget.Material.ImageButton"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_alignParentStart="false"
+            android:layout_alignParentTop="false"
+            android:layout_column="1"
+            android:layout_gravity="end"
+            android:layout_row="1"
+            android:background="@color/red"
+            android:onClick="onEnterTestClick"
+            android:src="@drawable/ic_entertest" />
+
+        <ImageButton
+            android:id="@+id/display_tests"
+            style="@android:style/Widget.Material.ImageButton"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/enter_test"
+            android:layout_column="0"
+            android:layout_row="1"
+            android:background="@color/red"
+            android:onClick="onVTestsClick"
+            android:src="@drawable/ic_displaytest" />
+
+        <ImageButton
+            android:id="@+id/display_patient"
+            style="@android:style/Widget.Material.ImageButton"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/logout"
+            android:layout_column="0"
+            android:layout_row="3"
+            android:background="@color/red"
+            android:onClick="onVPatientClick"
+            android:src="@drawable/ic_displaypatient" />
+
+        <ImageButton
+            android:id="@+id/logout"
+            style="@android:style/Widget.Material.ImageButton"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_column="1"
+            android:layout_gravity="top|left|start|end"
+            android:layout_row="3"
+            android:background="@color/red"
+            android:onClick="onLogoutClick"
+            android:src="@drawable/ic_logout" />
+    </GridLayout>
+</android.support.constraint.ConstraintLayout>
+
 

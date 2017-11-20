@@ -5,4 +5,5 @@
     <color name="orange">#fbba42</color>
     <color name="red">#f24c27</color>
     <color name="black">#3b3f42</color>
+    <color name="Lowlight">#333b3f42</color>
 </resources>

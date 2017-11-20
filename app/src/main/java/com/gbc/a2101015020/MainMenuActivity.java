@@ -20,19 +20,19 @@ public class MainMenuActivity extends Activity {
 
     protected void onVTestsClick(View view){
         Log.d(TAG, "View Tests: Pressed");
-        startActivity(new Intent(MainMenuActivity.this, ViewTestsActivity.class));
+        startActivity(new Intent(view.getContext(), ViewTestsActivity.class));
     }
     protected void onVPatientClick(View view){
         Log.d(TAG, "View Patient: Pressed");
-        startActivity(new Intent(MainMenuActivity.this, ViewPatientActivity.class));
+        startActivity(new Intent(view.getContext(), ViewPatientActivity.class));
     }
     protected void onEnterTestClick(View view){
         Log.d(TAG, "Enter Tests: Pressed");
-        startActivity(new Intent(MainMenuActivity.this, EnterTestActivity.class));
+        startActivity(new Intent(view.getContext(), EnterTestActivity.class));
     }
     protected void onLogoutClick(View view){
             Log.d(TAG, "Logout: Pressed");
             //AppDatabase.destroyInstance();
-            startActivity(new Intent(MainMenuActivity.this, LoginActivity.class));
+            startActivity(new Intent(view.getContext(), LoginActivity.class));
     }
 }
