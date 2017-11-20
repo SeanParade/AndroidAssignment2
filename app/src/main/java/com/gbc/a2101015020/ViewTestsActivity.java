@@ -17,7 +17,7 @@ public class ViewTestsActivity extends Activity {
 
         recView = findViewById(R.id.test_recycler_view);
         recView.setLayoutManager(new LinearLayoutManager(this));
-        adapter = new UserAdapter();
+        adapter = new TestViewAdapter();
         recView.setAdapter(adapter);
     }
 }

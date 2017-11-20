@@ -8,7 +8,7 @@ import android.view.ViewGroup;
  * Created on 11/20/2017.
  */
 
-class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder>{
+class TestViewAdapter extends RecyclerView.Adapter<TestViewAdapter.ViewHolder>{
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         return null;
