@@ -5,25 +5,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/red"
-    android:clickable="true"
     tools:context="com.gbc.a2101015020.LoginActivity">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/halthImageView"
         android:layout_width="256dp"
         android:layout_height="261dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="37dp"
         android:src="@drawable/ic_halth"
         tools:layout_editor_absoluteX="52dp"
         tools:layout_editor_absoluteY="62dp" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/halthTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/imageView"
+        android:layout_alignTop="@+id/halthImageView"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="207dp"
         android:fontFamily="monospace"
@@ -34,12 +32,12 @@
         android:typeface="normal" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/usernameEditText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView"
+        android:layout_below="@+id/halthTitle"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="54dp"
+        android:layout_marginTop="26dp"
         android:ems="10"
         android:inputType="textWebEditText"
         android:text="Username"
@@ -47,11 +45,11 @@
         android:textSize="24sp" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/passwordEditText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/editText"
-        android:layout_below="@+id/editText"
+        android:layout_alignStart="@+id/usernameEditText"
+        android:layout_below="@+id/usernameEditText"
         android:layout_marginTop="10dp"
         android:ems="10"
         android:inputType="textPassword"
@@ -60,15 +58,15 @@
         android:textSize="24sp" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/loginButton"
         android:layout_width="match_parent"
-        android:layout_height="@android:dimen/notification_large_icon_width"
+        android:layout_height="60sp"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/editText2"
+        android:layout_below="@+id/passwordEditText"
         android:layout_marginTop="19dp"
         android:background="@color/blue"
-        android:text="LOGIN"
         android:onClick="onLoginClick"
+        android:text="LOGIN"
         android:textColor="@color/white"
         android:textSize="24sp" />
 </RelativeLayout>

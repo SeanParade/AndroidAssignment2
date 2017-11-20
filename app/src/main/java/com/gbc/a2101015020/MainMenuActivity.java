@@ -12,28 +12,27 @@ import com.gbc.a2101015020.db.AppDatabase;
 public class MainMenuActivity extends Activity {
     private static final String TAG = "MainMenuActivity";
 
-    ImageButton enterTest;
-    ImageButton displayTests;
-    ImageButton displayPatient;
-    ImageButton logout;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
-
-        enterTest = findViewById(R.id.enter_test);
-        displayTests = findViewById(R.id.display_tests);
-        displayPatient = findViewById(R.id.display_patient);
-        logout = findViewById(R.id.logout);
     }
 
+    protected void onVTestsClick(View view){
+        Log.d(TAG, "View Tests: Pressed");
+        startActivity(new Intent(MainMenuActivity.this, ViewTestsActivity.class));
+    }
+    protected void onVPatientClick(View view){
+        Log.d(TAG, "View Patient: Pressed");
+        startActivity(new Intent(MainMenuActivity.this, ViewPatientActivity.class));
+    }
+    protected void onEnterTestClick(View view){
+        Log.d(TAG, "Enter Tests: Pressed");
+        startActivity(new Intent(MainMenuActivity.this, EnterTestActivity.class));
+    }
     protected void onLogoutClick(View view){
-            Log.d(TAG, "onLoginClick: Pressed");
+            Log.d(TAG, "Logout: Pressed");
             //AppDatabase.destroyInstance();
             startActivity(new Intent(MainMenuActivity.this, LoginActivity.class));
-
     }
-
-
 }

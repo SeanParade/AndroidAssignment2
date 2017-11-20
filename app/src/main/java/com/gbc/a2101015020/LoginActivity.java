@@ -27,7 +27,6 @@ public class LoginActivity extends Activity {
         startActivity(new Intent(LoginActivity.this, MainMenuActivity.class));
     }
 
-
     @Override
     protected void onDestroy(){
         AppDatabase.destroyInstance();
