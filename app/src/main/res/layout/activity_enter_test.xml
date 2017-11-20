@@ -24,14 +24,13 @@
         app:layout_constraintTop_toTopOf="@+id/test_form" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/submit_test_button"
         android:layout_width="346dp"
         android:layout_height="60sp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:background="@color/white"
-        android:onClick="onEnterTestClick"
         android:text="Enter Test"
         android:textColor="@color/orange"
         android:textSize="24sp"
@@ -44,13 +43,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:orientation="vertical"
         android:padding="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/button"
+        app:layout_constraintBottom_toBottomOf="@+id/submit_test_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.165"
-        tools:layout_editor_absoluteX="20dp">
+        app:layout_constraintVertical_bias="0.165">
 
         <TextView
             android:id="@+id/first_name_header"
