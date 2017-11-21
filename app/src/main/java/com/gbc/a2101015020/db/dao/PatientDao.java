@@ -15,6 +15,9 @@ public interface PatientDao {
         @Query("SELECT * FROM Patient")
         List<Patient> getAll();
 
+        @Query("SELECT firstname || ' ' || lastname AS `whole_name` FROM `Patient` WHERE `patientId` == :patientId")
+        String getPatientName(int patientId);
+
         @Insert
         void insertAll(Patient... patients);
 

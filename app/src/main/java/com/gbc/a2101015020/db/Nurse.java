@@ -23,8 +23,7 @@ public class Nurse {
     @ColumnInfo(name = "department")
     private String department;
 
-    public Nurse(int nurseId, String firstName, String lastName, String department) {
-        this.nurseId = nurseId;
+    public Nurse(String firstName, String lastName, String department) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.department = department;

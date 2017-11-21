@@ -30,12 +30,11 @@ public class Test {
 
     public Test() { }
 
-    public Test(int testId, int patientId, int bpl, int bph, int temperature) {
-        this.testId = testId;
-        this.patientId = patientId;
-        this.bpl = bpl;
-        this.bph = bph;
-        this.temperature = temperature;
+    public Test(String patientId, String bpl, String bph, String temperature) {
+        this.patientId = Integer.parseInt(patientId);
+        this.bpl = Integer.parseInt(bpl);
+        this.bph = Integer.parseInt(bph);
+        this.temperature = Integer.parseInt(temperature);
     }
 
     public Test(int testId, int patientId) {
