@@ -22,6 +22,9 @@ public interface DoctorDao {
         @Insert
         void insertAll(Doctor... doctors);
 
+        @Query("DELETE FROM doctor")
+        void nukeTable();
+
         @Update
         void updateDoctors(Doctor... doctors);
 

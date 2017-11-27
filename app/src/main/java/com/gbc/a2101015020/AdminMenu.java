@@ -10,11 +10,8 @@ import android.widget.Toast;
 
 import com.gbc.a2101015020.db.AppDatabase;
 import com.gbc.a2101015020.db.Nurse;
-import com.gbc.a2101015020.db.dao.NurseDao;
-
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
+
 
 public class AdminMenu extends Activity {
 

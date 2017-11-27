@@ -5,19 +5,27 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created on 11/20/2017.
  */
 
-class RecViewAdapter extends RecyclerView.Adapter<RecViewAdapter.ViewHolder>{
+public class RecViewAdapter extends RecyclerView.Adapter<RecViewAdapter.ViewHolder>{
 
-    ArrayList<String> data;
+    public interface OnItemClickListener {
+        void onItemClick(String item);
+    }
 
-    public RecViewAdapter(ArrayList<String> data) {
+    private final ArrayList<String> data;
+    private final OnItemClickListener listener;
+
+    public RecViewAdapter(ArrayList<String> data, OnItemClickListener listener) {
         this.data = data;
+        this.listener = listener;
     }
 
     @Override
@@ -28,7 +36,7 @@ class RecViewAdapter extends RecyclerView.Adapter<RecViewAdapter.ViewHolder>{
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        holder.cell.setText(data.get(position));
+        holder.bind(data.get(position), listener);
     }
 
     @Override
@@ -36,11 +44,23 @@ class RecViewAdapter extends RecyclerView.Adapter<RecViewAdapter.ViewHolder>{
         return data.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
-        public TextView cell;
+    static class ViewHolder extends RecyclerView.ViewHolder {
+        private TextView cell;
         public ViewHolder(View itemView) {
             super(itemView);
             cell = itemView.findViewById(R.id.rec_cell);
         }
+
+        public void bind (final String data, final OnItemClickListener listener) {
+            cell.setText(data);
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    listener.onItemClick(data);
+                }
+            });
+        }
     }
+
+
 }

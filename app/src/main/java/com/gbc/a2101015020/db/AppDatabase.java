@@ -12,7 +12,7 @@ import com.gbc.a2101015020.db.dao.*;
 /**
  * Created on 11/17/2017.
  */
-@Database(entities = {Patient.class, Test.class, Nurse.class, Doctor.class}, version = 1)
+@Database(entities = {Patient.class, Test.class, Nurse.class, Doctor.class}, version = 3)
 public abstract class AppDatabase extends RoomDatabase {
     private static AppDatabase INSTANCE;
 

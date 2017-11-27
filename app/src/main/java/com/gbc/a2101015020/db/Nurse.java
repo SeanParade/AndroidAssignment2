@@ -29,6 +29,13 @@ public class Nurse {
         this.department = department;
     }
 
+    public Nurse(int nurseId, String firstName, String lastName, String department) {
+        this.nurseId = nurseId + 100000;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.department = department;
+    }
+
     public Nurse(){ }
 
     public int getNurseId() {
@@ -61,5 +68,9 @@ public class Nurse {
 
     public void setDepartment(String department) {
         this.department = department;
+    }
+
+    public String getNurseIdStr() {
+        return String.valueOf(nurseId);
     }
 }

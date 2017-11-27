@@ -15,6 +15,12 @@ public interface TestDao {
         @Query("SELECT * FROM Test")
         List<Test> getAll();
 
+        @Query("SELECT * FROM `Test` WHERE `testId` == :testid")
+        List<Test> getTestById(int testid);
+
+        @Query("DELETE FROM test")
+        void nukeTable();
+
         @Insert
         void insertAll(Test... tests);
 

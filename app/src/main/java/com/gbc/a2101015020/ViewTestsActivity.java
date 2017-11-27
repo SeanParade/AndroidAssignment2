@@ -1,16 +1,20 @@
 package com.gbc.a2101015020;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 
 import com.gbc.a2101015020.db.AppDatabase;
 import com.gbc.a2101015020.db.Test;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
+import java.util.Map;
 
 public class ViewTestsActivity extends Activity {
 
@@ -34,11 +38,13 @@ public class ViewTestsActivity extends Activity {
     }
 
     private void fetchTests() {
-        List<Test> allTests = mDb.testDao().getAll();
-        for (Test test : allTests){
-            tests.add(String.format(Locale.getDefault(),"%s (Test ID: %d)",
-                      mDb.patientDao().getPatientName(test.getPatientId()), // patient full name
-                      test.getTestId()));
+        HashMap<Integer,Test> allTests = new HashMap<>();
+        for(Map.Entry<Integer, Test> test : allTests.entrySet()) {
+            Integer id = test.getKey();
+            Test testObj = test.getValue();
+            tests.add(String.format(Locale.getDefault()," %s \n Test ID: %d",
+                      mDb.patientDao().getPatientName(testObj.getPatientId()), // patient full name
+                      id));
         }
     }
 }

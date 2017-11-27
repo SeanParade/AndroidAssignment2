@@ -1,10 +1,6 @@
 package com.gbc.a2101015020.db.dao;
-
 import android.arch.persistence.room.*;
-
 import com.gbc.a2101015020.db.Nurse;
-import com.gbc.a2101015020.db.Test;
-
 import java.util.List;
 
 /**
@@ -17,6 +13,9 @@ public interface NurseDao {
 
         @Insert
         void insertAll(Nurse... nurses);
+
+        @Query("DELETE FROM nurse")
+        void nukeTable();
 
         @Update
         void updateNurses(Nurse... nurses);

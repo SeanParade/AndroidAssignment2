@@ -42,6 +42,14 @@ public class Patient {
         this.room = room;
     }
 
+    public Patient(String firstName, String lastName, String department, int doctorId, String room) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.department = department;
+        this.doctorId = doctorId;
+        this.room = room;
+    }
+
     public Patient(int patientId, String firstName, String lastName) {
         this.patientId = patientId;
         this.firstName = firstName;

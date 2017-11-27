@@ -69,6 +69,7 @@
             android:layout_height="wrap_content"
             android:background="@color/orange"
             android:backgroundTint="@color/Lowlight"
+            android:inputType="number"
             android:textSize="30sp" />
 
         <TextView
@@ -86,6 +87,7 @@
             android:layout_height="wrap_content"
             android:background="@color/orange"
             android:backgroundTint="@color/Lowlight"
+            android:inputType="number"
             android:textSize="30sp" />
 
         <TextView
@@ -103,6 +105,7 @@
             android:layout_height="wrap_content"
             android:background="@color/orange"
             android:backgroundTint="@color/Lowlight"
+            android:inputType="number"
             android:textSize="30sp" />
 
         <TextView
@@ -120,6 +123,7 @@
             android:layout_height="wrap_content"
             android:background="@color/orange"
             android:backgroundTint="@color/Lowlight"
+            android:inputType="numberDecimal"
             android:textSize="30sp" />
 
 

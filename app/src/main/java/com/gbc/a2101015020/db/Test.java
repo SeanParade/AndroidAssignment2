@@ -26,7 +26,7 @@ public class Test {
     private int bph;
 
     @ColumnInfo(name="temperature")
-    private int temperature;
+    private double temperature;
 
     public Test() { }
 
@@ -34,12 +34,22 @@ public class Test {
         this.patientId = Integer.parseInt(patientId);
         this.bpl = Integer.parseInt(bpl);
         this.bph = Integer.parseInt(bph);
-        this.temperature = Integer.parseInt(temperature);
+        this.temperature = Double.parseDouble(temperature);
     }
 
-    public Test(int testId, int patientId) {
+    public Test(int patientId, int bpl, int bph, double temperature) {
+        this.patientId = patientId;
+        this.bph = bph;
+        this.bpl = bpl;
+        this.temperature = temperature;
+    }
+
+    public Test(int testId, int patientId, int bpl, int bph, double temperature) {
         this.testId = testId;
         this.patientId = patientId;
+        this.bpl = bpl;
+        this.bph = bph;
+        this.temperature = temperature;
     }
 
     public Test(int testId, int patientId, int bpl, int bph) {
@@ -49,7 +59,7 @@ public class Test {
         this.bph = bph;
     }
 
-    public Test(int testId, int patientId, int temperature) {
+    public Test(int testId, int patientId, double temperature) {
         this.testId = testId;
         this.patientId = patientId;
         this.temperature = temperature;
@@ -87,11 +97,11 @@ public class Test {
         this.bph = bph;
     }
 
-    public int getTemperature() {
+    public double getTemperature() {
         return temperature;
     }
 
-    public void setTemperature(int temperature) {
+    public void setTemperature(double temperature) {
         this.temperature = temperature;
     }
 }

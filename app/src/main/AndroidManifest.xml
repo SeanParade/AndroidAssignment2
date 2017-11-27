@@ -16,16 +16,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainMenuActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".EnterTestActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".ViewTestsActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".ViewPatientActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".AdminMenu"
-            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".MainMenuActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".EnterTestActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ViewTestsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ViewPatientActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AdminMenu"
+            android:screenOrientation="portrait" />
+        <activity android:name=".TestDetailsActivity"></activity>
     </application>
 
 </manifest>

@@ -39,12 +39,11 @@ public class ViewPatientActivity extends Activity {
     private void fetchTests() {
         List<Patient> allPatients = mDb.patientDao().getAll();
         for (Patient patient : allPatients) {
-            patients.add(String.format(Locale.getDefault(), "%s %s (Patient ID: %d) \n" +
-                            "Doctor ID: %s \t Room: %s",
+            patients.add(String.format(Locale.getDefault(), " Name: %s %s \n Patient ID: %d \n" +
+                            " Doctor ID: %s \n Room: %s",
                     patient.getFirstName(), patient.getLastName(),
                     patient.getPatientId(), patient.getDoctorId(),
                     patient.getRoom()));
         }
     }
-
 }
