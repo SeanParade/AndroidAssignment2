@@ -1,10 +1,12 @@
 package com.gbc.a2101015020.db;
 
 
+import android.arch.persistence.db.SupportSQLiteDatabase;
 import android.arch.persistence.room.Database;
 import android.arch.persistence.room.Room;
 import android.arch.persistence.room.RoomDatabase;
 import android.content.Context;
+import android.support.annotation.NonNull;
 
 import com.gbc.a2101015020.db.dao.*;
 
@@ -30,6 +32,7 @@ public abstract class AppDatabase extends RoomDatabase {
         }
         return INSTANCE;
     }
+
 
     public static void destroyInstance(){
         INSTANCE = null;
