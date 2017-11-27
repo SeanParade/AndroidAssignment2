@@ -32,7 +32,12 @@ public class ViewPatientActivity extends Activity {
         patients = new ArrayList<>();
         fetchTests(); // populate tests
         recView.setLayoutManager(new LinearLayoutManager(this));
-        adapter = new RecViewAdapter(patients);
+        adapter = new RecViewAdapter(patients, new RecViewAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(String dataItem) {
+
+            }
+        });
         recView.setAdapter(adapter);
     }
 

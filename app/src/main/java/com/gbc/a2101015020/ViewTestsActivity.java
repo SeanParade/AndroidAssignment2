@@ -6,15 +6,14 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.Toast;
 
 import com.gbc.a2101015020.db.AppDatabase;
 import com.gbc.a2101015020.db.Test;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
-import java.util.Map;
 
 public class ViewTestsActivity extends Activity {
 
@@ -33,18 +32,22 @@ public class ViewTestsActivity extends Activity {
         tests = new ArrayList<>();
         fetchTests(); // populate tests
         recView.setLayoutManager(new LinearLayoutManager(this));
-        adapter = new RecViewAdapter(tests);
+        adapter = new RecViewAdapter(tests, new RecViewAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(String dataItem) {
+                String testID = dataItem.substring(dataItem.length()-7,dataItem.length()-1);
+                Toast.makeText(ViewTestsActivity.this, "item clicked" + testID, Toast.LENGTH_SHORT).show();
+            }
+        });
         recView.setAdapter(adapter);
     }
 
     private void fetchTests() {
-        HashMap<Integer,Test> allTests = new HashMap<>();
-        for(Map.Entry<Integer, Test> test : allTests.entrySet()) {
-            Integer id = test.getKey();
-            Test testObj = test.getValue();
+        List<Test> allTests = mDb.testDao().getAll();
+        for (Test test : allTests){
             tests.add(String.format(Locale.getDefault()," %s \n Test ID: %d",
-                      mDb.patientDao().getPatientName(testObj.getPatientId()), // patient full name
-                      id));
+                    mDb.patientDao().getPatientName(test.getPatientId()), // patient full name
+                    test.getTestId()));
         }
     }
 }

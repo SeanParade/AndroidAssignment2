@@ -17,7 +17,7 @@ import java.util.List;
 public class RecViewAdapter extends RecyclerView.Adapter<RecViewAdapter.ViewHolder>{
 
     public interface OnItemClickListener {
-        void onItemClick(String item);
+        void onItemClick(String dataItem);
     }
 
     private final ArrayList<String> data;
@@ -45,7 +45,9 @@ public class RecViewAdapter extends RecyclerView.Adapter<RecViewAdapter.ViewHold
     }
 
     static class ViewHolder extends RecyclerView.ViewHolder {
+
         private TextView cell;
+
         public ViewHolder(View itemView) {
             super(itemView);
             cell = itemView.findViewById(R.id.rec_cell);
