@@ -7,8 +7,8 @@
     android:background="@color/blue"
     tools:context="com.gbc.a2101015020.ViewTestsActivity">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/patient_recycler_view"
+    <ListView
+        android:id="@+id/patient_list_view"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginBottom="8dp"
