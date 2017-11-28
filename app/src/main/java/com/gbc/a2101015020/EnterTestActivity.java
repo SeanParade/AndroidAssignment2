@@ -52,10 +52,12 @@ public class EnterTestActivity extends Activity {
                 };
 
                 if(Arrays.asList(rules).contains(true)) {
+                    // if fields are empty
                     Toast.makeText(EnterTestActivity.this,
                             "Some fields are empty", Toast.LENGTH_SHORT).show();
                 }
                 else{
+                    // else insert test into db
                     Test t = new Test(patIdTxt, bplTxt, bphTxt, tempTxt);
                     AppDatabase.getDatabase(getApplicationContext()).testDao().insertAll(t); // db insert
                     AppDatabase.destroyInstance();

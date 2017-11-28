@@ -3,7 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/A2101015020.iml" filepath="$PROJECT_DIR$/A2101015020.iml" />
+<<<<<<< HEAD
+=======
       <module fileurl="file://D:\Sean Libraries\A2101015020\androidassignment2.iml" filepath="D:\Sean Libraries\A2101015020\androidassignment2.iml" />
+>>>>>>> master
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

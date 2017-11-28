@@ -24,7 +24,6 @@ public class LoginActivity extends Activity {
     private AppDatabase db;
     Button loginButton;
     EditText usrname;
-    EditText pass;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,26 +42,29 @@ public class LoginActivity extends Activity {
 
         loginButton = findViewById(R.id.login_button);
         usrname = findViewById(R.id.usernameEditText);
-        pass = findViewById(R.id.passwordEditText);
 
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Log.d(TAG, "onLoginClick: Pressed");
-                if(usrname.getText().toString().equals("admin")) // admin entered
+                if(usrname.getText().toString().equals("admin"))
+                    // admin entered
                     startActivity(new Intent(v.getContext(), AdminMenu.class));
-                else if(!usrname.getText().toString().isEmpty()) { // Edit text field populated
+                else if(!usrname.getText().toString().isEmpty()) {
+                    // Edit text field populated
                     List<Nurse> n = db.nurseDao().getAll();
                     List<Doctor> d = db.doctorDao().getAll();
 
-                    for (Nurse nurse : n){ // loop through nurses in db and see if ID matches
+                    for (Nurse nurse : n){
+                        // loop through nurses in db and see if ID matches
                         if(usrname.getText().toString()
                                 .equals(nurse.getNurseIdStr())){
                             startActivity(new Intent(v.getContext(), MainMenuActivity.class));
                             return;
                         }
                     }
-                    for (Doctor doctor : d){ // loop through nurses in db and see if ID matches
+                    for (Doctor doctor : d){
+                        // loop through doctors in db and see if ID matches
                         if(usrname.getText().toString()
                                 .equals(doctor.getDoctorIdStr())){
                             startActivity(new Intent(v.getContext(), MainMenuActivity.class));
@@ -83,6 +85,7 @@ public class LoginActivity extends Activity {
     }
 
     protected void populateDatabase(AppDatabase db){
+        // Populate the db with generic/iterative test data
         if(db.testDao().getAll().isEmpty()){
             for (int i = 1; i < 50; i++) {
                 String istr = String.valueOf(i);

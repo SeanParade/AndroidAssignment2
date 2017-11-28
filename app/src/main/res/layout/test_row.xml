@@ -2,19 +2,86 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="10sp"
-    android:background="@color/Lowlight"
     android:orientation="vertical">
+<GridView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/Lowlight">
+
+        <TextView
+            android:id="@+id/test_id_title_cell"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Test ID: "
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/test_id_cell"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/patient_title_cell"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Patient ID: "
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/patient_cell"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/bph_title_cell"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BPH: "
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/bph_cell"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
 
     <TextView
-        android:id="@+id/rec_cell"
+        android:id="@+id/bpl_title_cell"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BPL: "
+        android:textColor="@color/white"
+        android:textSize="24sp" />
+    <TextView
+        android:id="@+id/bpl_cell"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:clickable="true"
-        android:focusable="auto"
-        android:focusableInTouchMode="true"
-        android:focusedByDefault="true"
         android:textColor="@color/white"
         android:textSize="24sp" />
 
+        <TextView
+            android:id="@+id/temp_title_cell"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Temperature: "
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/temp_cell"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+
+</GridView>
 </LinearLayout>

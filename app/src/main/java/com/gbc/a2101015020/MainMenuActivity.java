@@ -32,7 +32,6 @@ public class MainMenuActivity extends Activity {
     }
     protected void onLogoutClick(View view){
             Log.d(TAG, "Logout: Pressed");
-            //AppDatabase.destroyInstance();
             startActivity(new Intent(view.getContext(), LoginActivity.class));
     }
 }
