@@ -1,17 +1,12 @@
 package com.gbc.a2101015020;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
-<<<<<<< HEAD
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-=======
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.widget.Toast;
->>>>>>> master
 import com.gbc.a2101015020.db.AppDatabase;
 import com.gbc.a2101015020.db.Test;
 import java.util.ArrayList;
