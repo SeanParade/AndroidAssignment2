@@ -47,10 +47,8 @@ public class LoginActivity extends Activity {
             @Override
             public void onClick(View v) {
                 Log.d(TAG, "onLoginClick: Pressed");
-                if(usrname.getText().toString().equals("admin"))
-                    // admin entered
-                    startActivity(new Intent(v.getContext(), AdminMenu.class));
-                else if(!usrname.getText().toString().isEmpty()) {
+                
+                if(!usrname.getText().toString().isEmpty()) {
                     // Edit text field populated
                     List<Nurse> n = db.nurseDao().getAll();
                     List<Doctor> d = db.doctorDao().getAll();
